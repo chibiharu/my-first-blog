@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+    <style>
+        header h1{
+            text-align: center;
+        }
+        nav ul{
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            width: 800px;
+            display: flex;
+            justify-content: center;
+            justify-content: space-between;
+            margin-right: auto;
+            margin-left: auto;
+            max-width:100%;
+        }
+        nav ul li a{
+            color: black;
+            text-decoration: none;
+        }
+        .h1_title {
+            margin-left: 300px;
+        }
+        .top_article {
+            width:900px;
+            max-width: 100%;
+            margin-right: auto;
+            margin-left: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .box_1 {
+            width: 300px;
+        }
+        
+        .box_2 {
+            width: 300px;
+        }
+        .skill_ul {
+            list-style: none;
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+        .box_3 {
+            width: 300px;
+        }
+        h2{
+            text-align: center;
+        }
+        .works_table {
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .works_th {
+            text-align: left;
+        }
+        .works_td {
+            text-align: center;
+        }
+        .works_table {
+            width: 700px;
+        }
+        .main_form {
+            width: 600px;
+            height: 600px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .thanks_p {
+            margin-left: 300px;
+        }
+        .errorlist {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            color: red;
+        }
+        div.field {
+            margin-bottom: 20px;
+        }
+        div.field > span.helptext {
+            font-size: 14px;
+            color: #999;
+        }
+        div.field > label {
+            display: block;
+        }
+        div.field > input,
+        div.field > textarea,
+        div.field > select {
+            width: 100%;
+            padding: 6px 12px;
+            box-sizing: border-box;
+            border-radius: 4px;
+            border: solid 1px #999;
+        }
+
+        @media screen and (max-width: 600px){
+            .h1_title{
+                margin-right: auto;
+                margin-left: auto;
+            }
+            .profile_dd{
+                text-align: left;
+                margin: 0;
+
+            }
+            .box_1 {
+                width: 33%;
+            }
+            .box_2 {
+                width: 33%;
+            }
+            .box_3 {
+                width: 33%;
+            }
+            .links_dd{
+                overflow-wrap: break-word;
+            }
+            .works_table {
+                width: 100%;
+            }
+            .works_td {
+                font-size: 95%;
+            }
+            .main_form {
+            width: 100%;
+            margin-right: auto;
+            margin-left: auto;
+        }
+            .thanks_p {
+            margin-left: 10px;
+        }
+        }
+        
+        
+    </style>
+</head>
+<body>
+
+<header>
+<h1>Harumasa's Room</h1>
+<nav>
+    <ul>
+        <li>
+            <a href="{% url 'myprofile:top' %}">TOP</a>
+            <a href="{% url 'myprofile:works' %}">Works</a>
+            <a href="{% url 'myprofile:portfolio' %}">Portfolio</a>
+            <a href="{% url 'myprofile:top' %}">Blog</a>
+            <a href="{% url 'myprofile:form' %}">Contact</a>
+        </li>
+    </ul>
+</nav>
+
+</header>
+
+{% block content %}{% endblock %}
+
+</body>
+</html>
