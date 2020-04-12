@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'myprofile.apps.MyprofileConfig',
     'diaries.apps.DiariesConfig',
     'reviews.apps.ReviewsConfig',
+    'blog.apps.BlogConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

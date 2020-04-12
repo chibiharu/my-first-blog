@@ -102,6 +102,16 @@
             border-radius: 4px;
             border: solid 1px #999;
         }
+        .blog_box {
+            width: 300px;
+            line-height: 3px;
+            margin-right: auto;
+            margin-left: auto;
+            border: 1px dotted #000;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        
 
         @media screen and (max-width: 600px){
             .h1_title{
@@ -154,7 +164,7 @@
             <a href="{% url 'myprofile:top' %}">TOP</a>
             <a href="{% url 'myprofile:works' %}">Works</a>
             <a href="{% url 'myprofile:portfolio' %}">Portfolio</a>
-            <a href="{% url 'myprofile:top' %}">Blog</a>
+            <a href="{% url 'blog:post_list' %}">Blog</a>
             <a href="{% url 'myprofile:form' %}">Contact</a>
         </li>
     </ul>
